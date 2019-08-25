@@ -49,7 +49,8 @@ public final class TodoIndexViewController: UIViewController {
     }
 
     @objc fileprivate func segueToAdd() {
-        print("追加するよん")
+        let addView = TodoAddViewController()
+        navigationController?.pushViewController(addView, animated: true)
     }
 }
 
