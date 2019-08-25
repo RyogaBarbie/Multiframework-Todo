@@ -5,6 +5,26 @@
       location = "group:MultiFramework-Todo.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:AppCore/AppCore.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AppBundle/AppBundle.xcodeproj">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Common">
+      <FileRef
+         location = "group:Entity/Entity.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:"
+      name = "Features">
+      <FileRef
+         location = "group:Todo/Todo.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

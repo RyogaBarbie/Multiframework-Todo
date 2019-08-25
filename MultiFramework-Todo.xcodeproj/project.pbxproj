@@ -13,6 +13,7 @@
 		4D4CF4272312339C008A1F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4CF4252312339C008A1F02 /* Main.storyboard */; };
 		4D4CF4292312339E008A1F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D4CF4282312339E008A1F02 /* Assets.xcassets */; };
 		4D4CF42C2312339E008A1F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4CF42A2312339E008A1F02 /* LaunchScreen.storyboard */; };
+		4D4CF4A423125A86008A1F02 /* libTodo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4CF4A323125A86008A1F02 /* libTodo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4D4CF4282312339E008A1F02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D4CF42B2312339E008A1F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D4CF42D2312339E008A1F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D4CF4A323125A86008A1F02 /* libTodo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libTodo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		866FCA49F8C978F4C51790E6 /* Pods-MultiFramework-Todo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiFramework-Todo.debug.xcconfig"; path = "Target Support Files/Pods-MultiFramework-Todo/Pods-MultiFramework-Todo.debug.xcconfig"; sourceTree = "<group>"; };
 		93FC8CC284A66C301707C38C /* Pods-MultiFramework-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultiFramework-Todo.release.xcconfig"; path = "Target Support Files/Pods-MultiFramework-Todo/Pods-MultiFramework-Todo.release.xcconfig"; sourceTree = "<group>"; };
 		E57F4E0E873DE2AFF9677FC2 /* Pods_MultiFramework_Todo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultiFramework_Todo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4CF4A423125A86008A1F02 /* libTodo.a in Frameworks */,
 				4A2954A32F622E8E98C2AB74 /* Pods_MultiFramework_Todo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +46,7 @@
 		204C5835CAB02DF0B75D17BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4D4CF4A323125A86008A1F02 /* libTodo.a */,
 				E57F4E0E873DE2AFF9677FC2 /* Pods_MultiFramework_Todo.framework */,
 			);
 			name = Frameworks;
@@ -85,7 +89,6 @@
 				866FCA49F8C978F4C51790E6 /* Pods-MultiFramework-Todo.debug.xcconfig */,
 				93FC8CC284A66C301707C38C /* Pods-MultiFramework-Todo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -264,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -319,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -337,6 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MultiFramework-Todo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MultiFramework-Todo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
