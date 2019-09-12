@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		29F6FBA32329181900D1BD73 /* EnvironmentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBA22329181900D1BD73 /* EnvironmentProvider.swift */; };
-		29F6FBA7232919D800D1BD73 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBA6232919D800D1BD73 /* Env.swift */; };
 		29F6FBA9232919F400D1BD73 /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBA8232919F400D1BD73 /* ViewControllerProvider.swift */; };
-		29F6FBAB23291A1200D1BD73 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBAA23291A1200D1BD73 /* AppConfig.swift */; };
-		4D4CF458231247DD008A1F02 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF457231247DD008A1F02 /* AppCore.swift */; };
+		29F6FBAB23291A1200D1BD73 /* AppConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBAA23291A1200D1BD73 /* AppConfigProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,11 +26,9 @@
 
 /* Begin PBXFileReference section */
 		29F6FBA22329181900D1BD73 /* EnvironmentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProvider.swift; sourceTree = "<group>"; };
-		29F6FBA6232919D800D1BD73 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		29F6FBA8232919F400D1BD73 /* ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
-		29F6FBAA23291A1200D1BD73 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		29F6FBAA23291A1200D1BD73 /* AppConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigProvider.swift; sourceTree = "<group>"; };
 		4D4CF454231247DD008A1F02 /* libAppCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D4CF457231247DD008A1F02 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +42,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D3A0383232A925C00410C70 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				29F6FBA22329181900D1BD73 /* EnvironmentProvider.swift */,
+				29F6FBA8232919F400D1BD73 /* ViewControllerProvider.swift */,
+				29F6FBAA23291A1200D1BD73 /* AppConfigProvider.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		4D4CF44B231247DD008A1F02 = {
 			isa = PBXGroup;
 			children = (
@@ -65,11 +71,7 @@
 		4D4CF456231247DD008A1F02 /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
-				4D4CF457231247DD008A1F02 /* AppCore.swift */,
-				29F6FBA22329181900D1BD73 /* EnvironmentProvider.swift */,
-				29F6FBA6232919D800D1BD73 /* Env.swift */,
-				29F6FBA8232919F400D1BD73 /* ViewControllerProvider.swift */,
-				29F6FBAA23291A1200D1BD73 /* AppConfig.swift */,
+				4D3A0383232A925C00410C70 /* Protocol */,
 			);
 			path = AppCore;
 			sourceTree = "<group>";
@@ -131,11 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29F6FBA7232919D800D1BD73 /* Env.swift in Sources */,
-				29F6FBAB23291A1200D1BD73 /* AppConfig.swift in Sources */,
+				29F6FBAB23291A1200D1BD73 /* AppConfigProvider.swift in Sources */,
 				29F6FBA9232919F400D1BD73 /* ViewControllerProvider.swift in Sources */,
 				29F6FBA32329181900D1BD73 /* EnvironmentProvider.swift in Sources */,
-				4D4CF458231247DD008A1F02 /* AppCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

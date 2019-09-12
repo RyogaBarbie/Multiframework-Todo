@@ -1,5 +1,5 @@
 //
-//  AppConfig.swift
+//  EnvironmentProvider.swift
 //  AppCore
 //
 //  Created by YamamuraRyoga on 2019/09/11.
@@ -8,6 +8,4 @@
 
 import Foundation
 
-public protocol AppConfig {
-    // 本体にある環境値,設定値などのインターフェースを定義する
-}
+public typealias EnvironmentProvider = ViewControllerProvider & AppConfigProvider
