@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29F6FBA1232917F600D1BD73 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBA0232917F600D1BD73 /* AppEnvironment.swift */; };
 		29F6FBA52329188500D1BD73 /* libAppCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F6FBA42329188500D1BD73 /* libAppCore.a */; };
 		4A2954A32F622E8E98C2AB74 /* Pods_MultiFramework_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57F4E0E873DE2AFF9677FC2 /* Pods_MultiFramework_Todo.framework */; };
 		4D3A0389232A956C00410C70 /* AppEnvironment+AppConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A0388232A956C00410C70 /* AppEnvironment+AppConfigProvider.swift */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		29F6FBA0232917F600D1BD73 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		29F6FBA42329188500D1BD73 /* libAppCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAppCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D3A0388232A956C00410C70 /* AppEnvironment+AppConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppEnvironment+AppConfigProvider.swift"; sourceTree = "<group>"; };
 		4D3A038A232A9D5600410C70 /* AppEnvironment+ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppEnvironment+ViewControllerProvider.swift"; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 		4D3A0387232A948E00410C70 /* AppEnvironment */ = {
 			isa = PBXGroup;
 			children = (
-				29F6FBA0232917F600D1BD73 /* AppEnvironment.swift */,
 				4D3A0388232A956C00410C70 /* AppEnvironment+AppConfigProvider.swift */,
 				4D3A038A232A9D5600410C70 /* AppEnvironment+ViewControllerProvider.swift */,
 			);
@@ -214,7 +211,6 @@
 				4D4CF4242312339C008A1F02 /* ViewController.swift in Sources */,
 				4D4CF4222312339C008A1F02 /* AppDelegate.swift in Sources */,
 				4D3A038B232A9D5600410C70 /* AppEnvironment+ViewControllerProvider.swift in Sources */,
-				29F6FBA1232917F600D1BD73 /* AppEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

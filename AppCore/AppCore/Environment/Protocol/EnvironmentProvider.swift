@@ -8,4 +8,6 @@
 
 import Foundation
 
-public typealias EnvironmentProvider = ViewControllerProvider & AppConfigProvider
+public typealias EnvironmentProvider = ViewControllerProvider
+    & AppConfigProvider
+    & DataStoreProvider

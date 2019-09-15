@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppCore
 import AppBundle
 import Entity
 
@@ -16,6 +17,18 @@ private extension Selector {
 
 public final class TodoIndexViewController: UIViewController {
 
+    public typealias Environment = EnvironmentProvider
+    public var environment: Environment
+    
+    public init(environment: Environment){
+        self.environment = environment
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     lazy var todoIndexView = TodoIndexView(frame: .zero)
     var todos = [Todo]()
 
@@ -26,7 +39,7 @@ public final class TodoIndexViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        dataSetup()
+        todoSetup()
         tableViewSetup()
     }
 
@@ -43,13 +56,12 @@ public final class TodoIndexViewController: UIViewController {
         CustomTodoItemCell<TodoItemTableCell>.register(to: todoIndexView.todoItemTable)
     }
 
-    private func dataSetup() {
-        let initialTodoName = ["洗濯", "買い物", "掃除", "ご飯", "お風呂", "仕事", "電話", "翌日の準備"]
-        todos = InitialData.create(initialTodoName)
+    private func todoSetup() {
+        todos = environment.userDefaultsDataStore.todos
     }
 
     @objc fileprivate func segueToAdd() {
-        let addView = TodoAddViewController()
+        let addView = TodoAddViewController(environment: environment)
         navigationController?.pushViewController(addView, animated: true)
     }
 }

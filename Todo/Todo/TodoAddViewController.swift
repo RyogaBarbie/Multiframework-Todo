@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AppCore
 import AppBundle
 import Entity
 
@@ -14,7 +15,19 @@ private extension Selector {
     static let addButtonPushed = #selector(TodoAddViewController.addButtonPushed)
 }
 
-class TodoAddViewController: UIViewController {
+final class TodoAddViewController: UIViewController {
+
+    typealias Environment = EnvironmentProvider
+    var environment: Environment
+
+    init(environment: Environment){
+        self.environment = environment
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     lazy var todoAddView = TodoAddView(frame: .zero)
 
@@ -34,6 +47,7 @@ class TodoAddViewController: UIViewController {
         guard let nvc = navigationController, let indexVc = nvc.viewControllers[nvc.viewControllers.count - 2] as? TodoIndexViewController, let newTodo = todoAddView.todoNameTextfield.text else { return }
         let todo = Todo.init(name: newTodo)
         indexVc.todos.append(todo)
+        environment.userDefaultsDataStore.setTodos(indexVc.todos.map({$0.name}))
         indexVc.todoIndexView.todoItemTable.reloadData()
         navigationController?.popViewController(animated: true)
     }

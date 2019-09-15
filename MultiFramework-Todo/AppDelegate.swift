@@ -8,6 +8,7 @@
 
 import UIKit
 import Todo
+import AppCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
+    let environment: AppEnvironment = AppEnvironment()
 
     self.window = UIWindow(frame: UIScreen.main.bounds)
-    let vc = TodoIndexViewController()
+    let vc = TodoIndexViewController(environment: environment)
     let rootNc = UINavigationController.init(rootViewController: vc)
     self.window?.rootViewController = rootNc
     self.window?.makeKeyAndVisible()

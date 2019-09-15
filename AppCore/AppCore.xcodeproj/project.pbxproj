@@ -10,6 +10,13 @@
 		29F6FBA32329181900D1BD73 /* EnvironmentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBA22329181900D1BD73 /* EnvironmentProvider.swift */; };
 		29F6FBA9232919F400D1BD73 /* ViewControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBA8232919F400D1BD73 /* ViewControllerProvider.swift */; };
 		29F6FBAB23291A1200D1BD73 /* AppConfigProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29F6FBAA23291A1200D1BD73 /* AppConfigProvider.swift */; };
+		4D3A0390232E095900410C70 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A038F232E095900410C70 /* DataStore.swift */; };
+		4D3A0392232E098D00410C70 /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A0391232E098D00410C70 /* UserDefaultsProtocol.swift */; };
+		4D3A0394232E09AC00410C70 /* UserDefailtsDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A0393232E09AC00410C70 /* UserDefailtsDataStore.swift */; };
+		4D3A0397232E2D3600410C70 /* libEntity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D3A0396232E2D3600410C70 /* libEntity.a */; };
+		4D3A039A232E3A6B00410C70 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A0399232E3A6B00410C70 /* AppEnvironment.swift */; };
+		4D3A039D232E690300410C70 /* DataStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A039C232E690300410C70 /* DataStoreProvider.swift */; };
+		4D3A039F232E6B3400410C70 /* AppEnvironment+DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A039E232E6B3400410C70 /* AppEnvironment+DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +35,13 @@
 		29F6FBA22329181900D1BD73 /* EnvironmentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentProvider.swift; sourceTree = "<group>"; };
 		29F6FBA8232919F400D1BD73 /* ViewControllerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProvider.swift; sourceTree = "<group>"; };
 		29F6FBAA23291A1200D1BD73 /* AppConfigProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigProvider.swift; sourceTree = "<group>"; };
+		4D3A038F232E095900410C70 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		4D3A0391232E098D00410C70 /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
+		4D3A0393232E09AC00410C70 /* UserDefailtsDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefailtsDataStore.swift; sourceTree = "<group>"; };
+		4D3A0396232E2D3600410C70 /* libEntity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntity.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D3A0399232E3A6B00410C70 /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		4D3A039C232E690300410C70 /* DataStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreProvider.swift; sourceTree = "<group>"; };
+		4D3A039E232E6B3400410C70 /* AppEnvironment+DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppEnvironment+DataStore.swift"; sourceTree = "<group>"; };
 		4D4CF454231247DD008A1F02 /* libAppCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAppCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3A0397232E2D3600410C70 /* libEntity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,8 +63,53 @@
 				29F6FBA22329181900D1BD73 /* EnvironmentProvider.swift */,
 				29F6FBA8232919F400D1BD73 /* ViewControllerProvider.swift */,
 				29F6FBAA23291A1200D1BD73 /* AppConfigProvider.swift */,
+				4D3A039B232E68DF00410C70 /* DataStore */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4D3A038D232E05EC00410C70 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A0398232E3A3A00410C70 /* AppEnviroment */,
+				4D3A0383232A925C00410C70 /* Protocol */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		4D3A038E232E093B00410C70 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A038F232E095900410C70 /* DataStore.swift */,
+				4D3A0391232E098D00410C70 /* UserDefaultsProtocol.swift */,
+				4D3A0393232E09AC00410C70 /* UserDefailtsDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		4D3A0395232E2D3600410C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A0396232E2D3600410C70 /* libEntity.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D3A0398232E3A3A00410C70 /* AppEnviroment */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A0399232E3A6B00410C70 /* AppEnvironment.swift */,
+				4D3A039E232E6B3400410C70 /* AppEnvironment+DataStore.swift */,
+			);
+			path = AppEnviroment;
+			sourceTree = "<group>";
+		};
+		4D3A039B232E68DF00410C70 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				4D3A039C232E690300410C70 /* DataStoreProvider.swift */,
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 		4D4CF44B231247DD008A1F02 = {
@@ -57,6 +117,7 @@
 			children = (
 				4D4CF456231247DD008A1F02 /* AppCore */,
 				4D4CF455231247DD008A1F02 /* Products */,
+				4D3A0395232E2D3600410C70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +132,8 @@
 		4D4CF456231247DD008A1F02 /* AppCore */ = {
 			isa = PBXGroup;
 			children = (
-				4D3A0383232A925C00410C70 /* Protocol */,
+				4D3A038D232E05EC00410C70 /* Environment */,
+				4D3A038E232E093B00410C70 /* DataStore */,
 			);
 			path = AppCore;
 			sourceTree = "<group>";
@@ -133,9 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3A039A232E3A6B00410C70 /* AppEnvironment.swift in Sources */,
 				29F6FBAB23291A1200D1BD73 /* AppConfigProvider.swift in Sources */,
+				4D3A0390232E095900410C70 /* DataStore.swift in Sources */,
 				29F6FBA9232919F400D1BD73 /* ViewControllerProvider.swift in Sources */,
+				4D3A039F232E6B3400410C70 /* AppEnvironment+DataStore.swift in Sources */,
+				4D3A039D232E690300410C70 /* DataStoreProvider.swift in Sources */,
 				29F6FBA32329181900D1BD73 /* EnvironmentProvider.swift in Sources */,
+				4D3A0394232E09AC00410C70 /* UserDefailtsDataStore.swift in Sources */,
+				4D3A0392232E098D00410C70 /* UserDefaultsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
