@@ -47,7 +47,6 @@ final class TodoAddViewController: UIViewController {
         guard let nvc = navigationController, let indexVc = nvc.viewControllers[nvc.viewControllers.count - 2] as? TodoIndexViewController, let newTodo = todoAddView.todoNameTextfield.text else { return }
         let todo = Todo.init(name: newTodo)
         indexVc.todos.append(todo)
-        environment.userDefaultsDataStore.setTodos(indexVc.todos.map({$0.name}))
         indexVc.todoIndexView.todoItemTable.reloadData()
         navigationController?.popViewController(animated: true)
     }

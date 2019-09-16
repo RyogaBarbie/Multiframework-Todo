@@ -30,7 +30,15 @@ public final class TodoIndexViewController: UIViewController {
     }
     
     lazy var todoIndexView = TodoIndexView(frame: .zero)
-    var todos = [Todo]()
+
+    var todos: [Todo] {
+        get {
+            return environment.userDefaultsDataStore.todos
+        }
+        set {
+            environment.userDefaultsDataStore.setTodos(newValue.map({$0.name}))
+        }
+    }
 
     public override func loadView() {
         view = todoIndexView
@@ -39,7 +47,6 @@ public final class TodoIndexViewController: UIViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        todoSetup()
         tableViewSetup()
     }
 
@@ -56,9 +63,6 @@ public final class TodoIndexViewController: UIViewController {
         CustomTodoItemCell<TodoItemTableCell>.register(to: todoIndexView.todoItemTable)
     }
 
-    private func todoSetup() {
-        todos = environment.userDefaultsDataStore.todos
-    }
 
     @objc fileprivate func segueToAdd() {
         let addView = TodoAddViewController(environment: environment)
