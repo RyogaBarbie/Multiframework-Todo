@@ -35,5 +35,6 @@ public class TodoIndexView: UIView {
     
     public func setup() {
         todoItemTable.tableFooterView = UIView(frame: .zero)
+        todoItemTable.allowsSelectionDuringEditing = true
     }
 }

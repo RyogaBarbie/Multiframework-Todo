@@ -53,7 +53,7 @@ public final class TodoIndexViewController: UIViewController {
     private func setupNavigationBar() {
         navigationItem.title = "ToDoリスト"
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: .segueToAdd)
-        navigationItem.setRightBarButton(addButton, animated: true)
+        navigationItem.setRightBarButtonItems([editButtonItem, addButton], animated: true)
     }
 
     private func tableViewSetup() {
@@ -80,6 +80,32 @@ extension TodoIndexViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = CustomTodoItemCell<TodoItemTableCell>.dequeued(from: tableView, for: indexPath)
         cell.setup(todos[indexPath.row])
         return cell
+    }
+
+    public override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        todoIndexView.todoItemTable.isEditing = editing
+    }
+
+    public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    public func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let todo = todos[sourceIndexPath.row]
+        todos.remove(at: sourceIndexPath.row)
+        todos.insert(todo, at: destinationIndexPath.row)
+    }
+
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        todos.remove(at: indexPath.row)
+        tableView.beginUpdates()
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
     }
 }
 
