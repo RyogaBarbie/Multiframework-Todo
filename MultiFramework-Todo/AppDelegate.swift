@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let environment: AppEnvironment = AppEnvironment()
 
     self.window = UIWindow(frame: UIScreen.main.bounds)
-    let vc = TodoIndexViewController(environment: environment)
+    let vc: UIViewController = environment.apply(TodoIndexViewControllerRequest()).viewController
     let rootNc = UINavigationController.init(rootViewController: vc)
     self.window?.rootViewController = rootNc
     self.window?.makeKeyAndVisible()

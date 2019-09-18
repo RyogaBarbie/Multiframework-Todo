@@ -8,5 +8,10 @@
 
 import Foundation
 import AppCore
+import Todo
 
-extension AppEnvironment: AppCore.ViewControllerProvider {}
+extension AppEnvironment: AppCore.ViewControllerProvider {
+    public func apply(_ request: TodoIndexViewControllerRequest) -> TodoIndexViewControllerRequest.EnvironmentResponse {
+        return request.response(for: TodoIndexViewController.self, environment: self)
+    }
+}

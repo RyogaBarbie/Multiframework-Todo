@@ -15,7 +15,7 @@ private extension Selector {
     static let segueToAdd = #selector(TodoIndexViewController.segueToAdd)
 }
 
-public final class TodoIndexViewController: UIViewController {
+public final class TodoIndexViewController: UIViewController, Instantiatable {
 
     public typealias Environment = EnvironmentProvider
     public var environment: Environment

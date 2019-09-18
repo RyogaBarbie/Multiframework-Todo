@@ -9,6 +9,5 @@
 import Foundation
 
 public protocol ViewControllerProvider {
-    // 引数にViewControllerRequest、返り値にViewControllerResponseを返す
-    // applyメソッドのインターフェースを定義する
+    func apply(_ request: TodoIndexViewControllerRequest) -> TodoIndexViewControllerRequest.EnvironmentResponse
 }
