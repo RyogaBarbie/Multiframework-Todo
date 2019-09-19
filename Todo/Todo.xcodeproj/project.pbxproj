@@ -12,6 +12,7 @@
 		4D4CF48D231249F9008A1F02 /* libEntity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D4CF48C231249F9008A1F02 /* libEntity.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		4D4CF49823124F4F008A1F02 /* TodoIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF49723124F4F008A1F02 /* TodoIndexViewController.swift */; };
 		4D4CF49A23124F79008A1F02 /* TodoAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF49923124F79008A1F02 /* TodoAddViewController.swift */; };
+		4D68EA872333CBE300F35638 /* TodoShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68EA862333CBE200F35638 /* TodoShowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		4D4CF48C231249F9008A1F02 /* libEntity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEntity.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D4CF49723124F4F008A1F02 /* TodoIndexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoIndexViewController.swift; sourceTree = "<group>"; };
 		4D4CF49923124F79008A1F02 /* TodoAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAddViewController.swift; sourceTree = "<group>"; };
+		4D68EA862333CBE200F35638 /* TodoShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoShowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			children = (
 				4D4CF49723124F4F008A1F02 /* TodoIndexViewController.swift */,
 				4D4CF49923124F79008A1F02 /* TodoAddViewController.swift */,
+				4D68EA862333CBE200F35638 /* TodoShowViewController.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			files = (
 				4D4CF49A23124F79008A1F02 /* TodoAddViewController.swift in Sources */,
 				4D4CF49823124F4F008A1F02 /* TodoIndexViewController.swift in Sources */,
+				4D68EA872333CBE300F35638 /* TodoShowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

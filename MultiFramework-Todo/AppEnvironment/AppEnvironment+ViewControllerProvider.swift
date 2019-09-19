@@ -14,4 +14,7 @@ extension AppEnvironment: AppCore.ViewControllerProvider {
     public func apply(_ request: TodoIndexViewControllerRequest) -> TodoIndexViewControllerRequest.EnvironmentResponse {
         return request.response(for: TodoIndexViewController.self, environment: self)
     }
+    public func apply(_ request: TodoShowViewControllerRequest) -> TodoShowViewControllerRequest.EnvironmentResponse {
+        return request.response(for: TodoShowViewController.self, environment: self)
+    }
 }

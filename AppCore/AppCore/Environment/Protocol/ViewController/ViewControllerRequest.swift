@@ -10,12 +10,15 @@ import Foundation
 import UIKit
 
 public protocol ViewControllerRequest: EnvironmentRequest where EnvironmentResponse == ViewControllerResponse {
+    associatedtype Input
     associatedtype EnvironmentResponse = ViewControllerResponse
+    
+    var inputValue: Input { get }
 }
 
 extension ViewControllerRequest {
-    public func response<V>(for type: V.Type, environment: V.Environment) -> ViewControllerResponse where V: UIViewController, V: Instantiatable {
-        let viewController = V(environment: environment)
+    public func response<V>(for type: V.Type, environment: V.Environment) -> ViewControllerResponse where V: UIViewController, V: Instantiatable, V.Input == Input {
+        let viewController = V(with: inputValue, environment: environment)
         return ViewControllerResponse(viewController: viewController)
     }
 }

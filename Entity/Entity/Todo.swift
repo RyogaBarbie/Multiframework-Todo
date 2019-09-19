@@ -10,9 +10,11 @@ import Foundation
 
 public struct Todo {
     public var name: String
+    public var memo: String
     
-    public init(name: String) {
+    public init(name: String, memo: String) {
         self.name = name
+        self.memo = memo
     }
 }
 

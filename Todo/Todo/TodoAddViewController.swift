@@ -44,8 +44,8 @@ final class TodoAddViewController: UIViewController {
     }
     
     @objc fileprivate func addButtonPushed() {
-        guard let nvc = navigationController, let indexVc = nvc.viewControllers[nvc.viewControllers.count - 2] as? TodoIndexViewController, let newTodo = todoAddView.todoNameTextfield.text else { return }
-        let todo = Todo.init(name: newTodo)
+        guard let nvc = navigationController, let indexVc = nvc.viewControllers[nvc.viewControllers.count - 2] as? TodoIndexViewController, let todoName = todoAddView.todoNameTextfield.text, let todoMemo = todoAddView.todoMemoTextField.text else { return }
+        let todo = Todo.init(name: todoName, memo: todoMemo)
         indexVc.todos.append(todo)
         indexVc.todoIndexView.todoItemTable.reloadData()
         navigationController?.popViewController(animated: true)

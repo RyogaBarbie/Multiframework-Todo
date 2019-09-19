@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TodoAddView" customModule="AppBundle" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="tcz-bC-Xwx" id="fn3-Wc-bL3"/>
+                <outlet property="todoMemoTextField" destination="iDc-Em-2ac" id="GUg-qF-mQg"/>
                 <outlet property="todoNameTextfield" destination="jA9-yo-Hpg" id="Ee0-T8-jeD"/>
                 <outlet property="view" destination="iN0-l3-epB" id="fZe-ZE-944"/>
             </connections>
@@ -21,10 +22,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="やらなきゃいけないこと書いてね" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jA9-yo-Hpg">
-                    <rect key="frame" x="82" y="244" width="250" height="30"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タスクネーム" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jA9-yo-Hpg">
+                    <rect key="frame" x="107" y="244" width="200" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="250" id="PEh-fC-uVj"/>
+                        <constraint firstAttribute="width" constant="200" id="PEh-fC-uVj"/>
                         <constraint firstAttribute="height" constant="30" id="TPp-OR-H69"/>
                     </constraints>
                     <nil key="textColor"/>
@@ -39,9 +40,21 @@
                     </constraints>
                     <state key="normal" title="追加する"/>
                 </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メモ" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iDc-Em-2ac">
+                    <rect key="frame" x="57" y="304" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="F7V-os-2Rf"/>
+                        <constraint firstAttribute="width" constant="300" id="nJa-J6-zaY"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="iDc-Em-2ac" firstAttribute="top" secondItem="jA9-yo-Hpg" secondAttribute="bottom" constant="30" id="7Lx-cW-G2y"/>
+                <constraint firstItem="iDc-Em-2ac" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="IjR-bo-Ifg"/>
                 <constraint firstItem="tcz-bC-Xwx" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="RUI-Lg-mL7"/>
                 <constraint firstItem="tcz-bC-Xwx" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="e7S-ue-l1S"/>
                 <constraint firstItem="jA9-yo-Hpg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="200" id="tZm-9H-7pI"/>

@@ -17,10 +17,12 @@ private extension Selector {
 
 public final class TodoIndexViewController: UIViewController, Instantiatable {
 
+    private var input: Input
+    public typealias Input = TodoIndexViewControllerRequest.Input
     public typealias Environment = EnvironmentProvider
     public var environment: Environment
     
-    public init(environment: Environment){
+    public init(with input: Input, environment: Environment){
         self.environment = environment
         super.init(nibName: nil, bundle: nil)
     }
@@ -36,7 +38,7 @@ public final class TodoIndexViewController: UIViewController, Instantiatable {
             return environment.userDefaultsDataStore.todos
         }
         set {
-            environment.userDefaultsDataStore.setTodos(newValue.map({$0.name}))
+            environment.userDefaultsDataStore.setTodos(newValue.map {[$0.name, $0.memo]} )
         }
     }
 
@@ -80,6 +82,16 @@ extension TodoIndexViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = CustomTodoItemCell<TodoItemTableCell>.dequeued(from: tableView, for: indexPath)
         cell.setup(todos[indexPath.row])
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = environment.apply(
+                TodoShowViewControllerRequest(
+                    TodoShowViewControllerRequest.Input(todo: todos[indexPath.row])
+                )
+            ).viewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     public override func setEditing(_ editing: Bool, animated: Bool) {

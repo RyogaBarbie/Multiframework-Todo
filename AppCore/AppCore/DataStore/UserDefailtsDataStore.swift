@@ -32,14 +32,14 @@ extension UserDefaultsDataStore {
 
     public var todos: [Todo] {
         var todos = [Todo]()
-        guard let values: [String] = value(for: .todo) else { return todos }
+        guard let values: [[String]] = value(for: .todo) else { return todos }
         for value in values {
-            todos.append(Todo(name: value))
+            todos.append(Todo(name: value[0], memo: value[1]))
         }
         return todos
     }
 
-    public func setTodos(_ newValues: [String]){
+    public func setTodos(_ newValues: [[String]]){
         setValue(newValues, for: .todo)
     }
 }

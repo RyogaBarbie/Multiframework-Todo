@@ -22,6 +22,7 @@
 		4D68EA8023328BF400F35638 /* ViewControllerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68EA7F23328BF400F35638 /* ViewControllerRequest.swift */; };
 		4D68EA8223328D5E00F35638 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68EA8123328D5E00F35638 /* Instantiatable.swift */; };
 		4D68EA842332902300F35638 /* ViewControllerRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68EA832332902300F35638 /* ViewControllerRequests.swift */; };
+		4D68EA8E2333D79100F35638 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D68EA8D2333D79100F35638 /* Injectable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +54,7 @@
 		4D68EA7F23328BF400F35638 /* ViewControllerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRequest.swift; sourceTree = "<group>"; };
 		4D68EA8123328D5E00F35638 /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
 		4D68EA832332902300F35638 /* ViewControllerRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRequests.swift; sourceTree = "<group>"; };
+		4D68EA8D2333D79100F35638 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				4D4C657623325C9500040245 /* EnvironmentRequest.swift */,
 				4D68EA8123328D5E00F35638 /* Instantiatable.swift */,
+				4D68EA8D2333D79100F35638 /* Injectable.swift */,
 				29F6FBA8232919F400D1BD73 /* ViewControllerProvider.swift */,
 				4D68EA7D2332884600F35638 /* ViewControllerResponse.swift */,
 				4D68EA7F23328BF400F35638 /* ViewControllerRequest.swift */,
@@ -239,6 +242,7 @@
 				4D3A0394232E09AC00410C70 /* UserDefailtsDataStore.swift in Sources */,
 				4D68EA8023328BF400F35638 /* ViewControllerRequest.swift in Sources */,
 				4D68EA8223328D5E00F35638 /* Instantiatable.swift in Sources */,
+				4D68EA8E2333D79100F35638 /* Injectable.swift in Sources */,
 				4D3A0392232E098D00410C70 /* UserDefaultsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,4 +10,5 @@ import Foundation
 
 public protocol ViewControllerProvider {
     func apply(_ request: TodoIndexViewControllerRequest) -> TodoIndexViewControllerRequest.EnvironmentResponse
+    func apply(_ request: TodoShowViewControllerRequest) -> TodoShowViewControllerRequest.EnvironmentResponse
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4D2BF6D223129A9A0056638A /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BF6D123129A9A0056638A /* Todo.swift */; };
-		4D2BF6D523129CBB0056638A /* InitialData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2BF6D423129CBB0056638A /* InitialData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		4D2BF6D123129A9A0056638A /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		4D2BF6D323129AD80056638A /* Entity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
-		4D2BF6D423129CBB0056638A /* InitialData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialData.swift; sourceTree = "<group>"; };
 		4D4CF46723124802008A1F02 /* libEntity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEntity.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -62,7 +60,6 @@
 			children = (
 				4D2BF6D123129A9A0056638A /* Todo.swift */,
 				4D2BF6D323129AD80056638A /* Entity.h */,
-				4D2BF6D423129CBB0056638A /* InitialData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -126,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2BF6D223129A9A0056638A /* Todo.swift in Sources */,
-				4D2BF6D523129CBB0056638A /* InitialData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

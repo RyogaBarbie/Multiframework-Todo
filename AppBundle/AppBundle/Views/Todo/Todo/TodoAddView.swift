@@ -17,6 +17,7 @@ public class TodoAddView: UIView {
         }
     }
     @IBOutlet public weak var todoNameTextfield: UITextField!
+    @IBOutlet public weak var todoMemoTextField: UITextField!
     @IBOutlet public weak var addButton: UIButton!
 
     public override init(frame: CGRect) {

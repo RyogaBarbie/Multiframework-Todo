@@ -6,16 +6,20 @@
 //  Copyright © 2019 Yamamura Ryoga. All rights reserved.
 //
 
-import Foundation
-
 public protocol Instantiatable {
+    associatedtype Input
     associatedtype Environment
     var environment: Environment { get }
-    init(environment: Environment)
+    init(with input: Input, environment: Environment)
 }
 
 public extension Instantiatable {
+    static func instantiate(_ input: Input, environment: Environment) -> Self {
+        return Self(with: input, environment: environment)
+    }
+}
+public extension Instantiatable where Input == Void {
     static func instantiate(environment: Environment) -> Self {
-        return Self(environment: environment)
+        return Self(with: (), environment: environment)
     }
 }
