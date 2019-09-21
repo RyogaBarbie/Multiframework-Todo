@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Todo {
+public struct Todo: Equatable {
     public var name: String
     public var memo: String
     
