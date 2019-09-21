@@ -15,12 +15,14 @@ private extension Selector {
     static let addButtonPushed = #selector(TodoAddViewController.addButtonPushed)
 }
 
-final class TodoAddViewController: UIViewController {
+public final class TodoAddViewController: UIViewController, Instantiatable {
+ 
+    private var input: Input
+    public typealias Input = TodoAddViewControllerRequest.Input
+    public typealias Environment = EnvironmentProvider
+    public var environment: Environment
 
-    typealias Environment = EnvironmentProvider
-    var environment: Environment
-
-    init(environment: Environment){
+    public init(with input: Input, environment: Environment){
         self.environment = environment
         super.init(nibName: nil, bundle: nil)
     }
@@ -31,10 +33,10 @@ final class TodoAddViewController: UIViewController {
 
     lazy var todoAddView = TodoAddView(frame: .zero)
 
-    override func loadView() {
+    override public func loadView() {
         view = todoAddView
     }
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         todoAddView.addButton.addTarget(self, action: .addButtonPushed, for: .touchUpInside)
