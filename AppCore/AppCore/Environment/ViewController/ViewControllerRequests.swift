@@ -16,6 +16,13 @@ public struct TodoIndexViewControllerRequest: ViewControllerRequest {
     public init(){}
 }
 
+public struct TodoAddViewControllerRequest: ViewControllerRequest {
+    public var inputValue: Void
+    public typealias Input = Void
+    
+    public init(){}
+}
+
 public struct TodoShowViewControllerRequest: ViewControllerRequest {
     public var inputValue: Input
     public struct Input {

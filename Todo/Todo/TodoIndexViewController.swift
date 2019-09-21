@@ -67,8 +67,8 @@ public final class TodoIndexViewController: UIViewController, Instantiatable {
 
 
     @objc fileprivate func segueToAdd() {
-        let addView = TodoAddViewController(environment: environment)
-        navigationController?.pushViewController(addView, animated: true)
+        let vc = environment.apply(TodoAddViewControllerRequest()).viewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
