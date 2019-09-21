@@ -21,6 +21,9 @@
       location = "group:"
       name = "Features">
       <FileRef
+         location = "group:TodoShow/TodoShow.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Todo/Todo.xcodeproj">
       </FileRef>
    </Group>
